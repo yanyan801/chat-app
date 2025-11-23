@@ -1,0 +1,42 @@
+<!--pages/chat/chat.wxml-->
+<view class="chat-container">
+    <scroll-view class="messages-area" scroll-y scroll-into-view="{{toView}}" scroll-with-animation>
+        <block wx:if="{{messages.length === 0}}">
+            <view class="empty-state">
+                <text class="empty-text">宗师正在打坐...</text>
+                <text class="empty-text">有什么想问的吗？</text>
+            </view>
+        </block>
+
+        <block wx:for="{{messages}}" wx:key="index">
+            <view class="message-row {{item.role === 'user' ? 'user-row' : 'bot-row'}}" id="msg-{{index}}">
+                <view class="avatar {{item.role === 'user' ? 'user-avatar' : 'bot-avatar'}}">
+                    <text>{{item.role === 'user' ? '👤' : '🥣'}}</text>
+                </view>
+                <view class="bubble {{item.role === 'user' ? 'user-bubble' : 'bot-bubble'}}">
+                    <text>{{item.content}}</text>
+                </view>
+            </view>
+        </block>
+
+        <view wx:if="{{isLoading}}" class="message-row bot-row">
+            <view class="avatar bot-avatar">
+                <text>🥣</text>
+            </view>
+            <view class="bubble bot-bubble loading-bubble">
+                <text>宗师思考中...</text>
+            </view>
+        </view>
+
+        <view id="bottom-anchor" style="height: 20rpx;"></view>
+    </scroll-view>
+
+    <view class="input-area">
+        <view class="input-box">
+            <input class="input" value="{{inputValue}}" bindinput="onInput" bindconfirm="sendMessage" confirm-type="send" placeholder="问点什么..." disabled="{{isLoading}}" />
+            <view class="send-btn {{inputValue ? 'active' : ''}}" bindtap="sendMessage">
+                <text>➤</text>
+            </view>
+        </view>
+    </view>
+</view>

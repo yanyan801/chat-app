@@ -1,0 +1,117 @@
+/* pages/game/game.wxss */
+.game-container {
+    height: 100vh;
+    justify-content: center;
+    padding: 40rpx;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 80rpx;
+  }
+  
+  .title {
+    font-size: 48rpx;
+    font-weight: bold;
+    color: #8B4513;
+    display: block;
+    margin-bottom: 10rpx;
+  }
+  
+  .subtitle {
+    font-size: 28rpx;
+    color: #666;
+  }
+  
+  .game-area {
+    position: relative;
+    height: 400rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60rpx;
+  }
+  
+  .gourd {
+    font-size: 200rpx;
+    transition: transform 0.3s;
+  }
+  
+  .gourd:active {
+    transform: scale(0.95);
+  }
+  
+  .shaking {
+    animation: shake 0.5s infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .result-box {
+    position: absolute;
+    bottom: -40rpx;
+    background: white;
+    padding: 10rpx 40rpx;
+    border-radius: 40rpx;
+    box-shadow: 0 4rpx 20rpx rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20rpx);
+    transition: all 0.3s;
+  }
+  
+  .result-box.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .result-text {
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #8B4513;
+  }
+  
+  .result-text.lucky {
+    color: #EF4444;
+  }
+  
+  .score-board {
+    background: white;
+    padding: 30rpx;
+    border-radius: 24rpx;
+    width: 300rpx;
+    text-align: center;
+    margin-bottom: 40rpx;
+    box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
+  }
+  
+  .score-label {
+    font-size: 24rpx;
+    color: #666;
+    display: block;
+    margin-bottom: 10rpx;
+  }
+  
+  .score-value {
+    font-size: 60rpx;
+    font-weight: bold;
+    color: #8B4513;
+  }
+  
+  .shake-btn {
+    background: #8B4513;
+    color: white;
+    width: 300rpx;
+    border-radius: 24rpx;
+    font-size: 32rpx;
+    padding: 20rpx 0;
+  }
+  
+  .shake-btn[disabled] {
+    opacity: 0.6;
+  }

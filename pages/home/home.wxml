@@ -1,0 +1,44 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <!-- Hero Section -->
+  <view class="hero">
+    <view class="hero-content">
+      <text class="hero-title">宗师算个瓢啊</text>
+      <text class="hero-subtitle">万物皆瓢，不瓢不行。</text>
+      <button class="hero-btn" bindtap="goToChat">向宗师提问</button>
+    </view>
+    <view class="hero-bg-circle"></view>
+  </view>
+
+  <!-- Quick Actions -->
+  <view class="quick-actions">
+    <view class="action-card" bindtap="goToChat">
+      <view class="icon-circle blue">
+        <text class="icon">💬</text>
+      </view>
+      <text class="action-text">智能问答</text>
+    </view>
+    <view class="action-card" bindtap="goToGame">
+      <view class="icon-circle orange">
+        <text class="icon">🎮</text>
+      </view>
+      <text class="action-text">摇个瓢</text>
+    </view>
+  </view>
+
+  <!-- Recommendations -->
+  <view class="recommendations">
+    <text class="section-title">今日推荐</text>
+    <block wx:for="{{recommendations}}" wx:key="id">
+      <view class="rec-card">
+        <view class="rec-icon-box">
+          <text class="rec-icon">{{item.icon}}</text>
+        </view>
+        <view class="rec-content">
+          <text class="rec-title">{{item.title}}</text>
+          <text class="rec-desc">{{item.content}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+{
+    "pages": [
+      "pages/home/home",
+      "pages/chat/chat",
+      "pages/game/game"
+    ],
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#F6F4F1",
+      "navigationBarTitleText": "宗师算个瓢啊",
+      "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+      "color": "#999999",
+      "selectedColor": "#8B4513",
+      "backgroundColor": "#ffffff",
+      "borderStyle": "black",
+      "list": [
+        {
+          "pagePath": "pages/home/home",
+          "text": "首页",
+          "iconPath": "images/home.png",
+          "selectedIconPath": "images/home-active.png"
+        },
+        {
+          "pagePath": "pages/chat/chat",
+          "text": "问宗师",
+          "iconPath": "images/chat.png",
+          "selectedIconPath": "images/chat-active.png"
+        },
+        {
+          "pagePath": "pages/game/game",
+          "text": "摇个瓢",
+          "iconPath": "images/game.png",
+          "selectedIconPath": "images/game-active.png"
+        }
+      ]
+    },
+    "sitemapLocation": "sitemap.json"
+  }

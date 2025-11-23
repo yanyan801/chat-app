@@ -1,0 +1,26 @@
+<!--pages/game/game.wxml-->
+<view class="container game-container">
+  <view class="header">
+    <text class="title">摇个瓢</text>
+    <text class="subtitle">心诚则灵，不灵则瓢</text>
+  </view>
+
+  <view class="game-area">
+    <view class="gourd {{isShaking ? 'shaking' : ''}}" bindtap="handleShake">
+      <text>🥣</text>
+    </view>
+
+    <view class="result-box {{result ? 'show' : ''}}">
+      <text class="result-text {{result === '大吉' ? 'lucky' : ''}}">{{result}}</text>
+    </view>
+  </view>
+
+  <view class="score-board">
+    <text class="score-label">当前功德</text>
+    <text class="score-value">{{score}}</text>
+  </view>
+
+  <button class="shake-btn" bindtap="handleShake" disabled="{{isShaking}}">
+    {{isShaking ? '正在摇...' : '摇一摇'}}
+  </button>
+</view>
