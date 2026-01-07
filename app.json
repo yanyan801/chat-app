@@ -30,9 +30,9 @@
         },
         {
           "pagePath": "pages/game/game",
-          "text": "摇个瓢",
-          "iconPath": "images/game.png",
-          "selectedIconPath": "images/game-active.png"
+          "text": "敲个瓢",
+          "iconPath": "images/woodenFish.png",
+          "selectedIconPath": "images/woodenFish-active.png"
         }
       ]
     },

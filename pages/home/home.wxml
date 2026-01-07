@@ -16,13 +16,13 @@
       <view class="icon-circle blue">
         <text class="icon">💬</text>
       </view>
-      <text class="action-text">智能问答</text>
+      <text class="action-text">你问宗答</text>
     </view>
     <view class="action-card" bindtap="goToGame">
       <view class="icon-circle orange">
-        <text class="icon">🎮</text>
+        <text class="icon">🫥</text>
       </view>
-      <text class="action-text">摇个瓢</text>
+      <text class="action-text">敲个好运</text>
     </view>
   </view>
 

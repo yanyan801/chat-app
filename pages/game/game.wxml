@@ -1,7 +1,7 @@
 <!--pages/game/game.wxml-->
 <view class="container game-container">
   <view class="header">
-    <text class="title">摇个瓢</text>
+    <text class="title">敲个瓢</text>
     <text class="subtitle">心诚则灵，不灵则瓢</text>
   </view>
 
@@ -21,6 +21,6 @@
   </view>
 
   <button class="shake-btn" bindtap="handleShake" disabled="{{isShaking}}">
-    {{isShaking ? '正在摇...' : '摇一摇'}}
+    {{isShaking ? '正在敲...' : '   敲一下'}}
   </button>
 </view>
